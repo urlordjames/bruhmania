@@ -1,0 +1,8 @@
+[package]
+name = "bruhmania"
+version = "0.1.0"
+
+[dependencies]
+reqwest = { version = "0.11", features = ["blocking"] }
+json = "0.12"
+chrono = "0.4"
