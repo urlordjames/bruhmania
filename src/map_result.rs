@@ -38,7 +38,6 @@ impl MapResult {
 		let json = json::parse(&resp).unwrap();
 
 		let top = &json["tops"][0];
-		println!("{}", json);
 
 		Ok(MapResult {
 			time: match top["time"].as_number() {
