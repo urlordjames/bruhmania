@@ -42,7 +42,7 @@ impl MapResult {
 		Ok(MapResult {
 			time: match top["time"].as_number() {
 				None => return Err(MapError::TimeNaN),
-				Some(n) => n
+				Some(n) => (f64::from(n) / 1000.0).into()
 			},
 			timestamp: match top["timestamp"].as_str() {
 				None => return Err(MapError::DateNotString),
